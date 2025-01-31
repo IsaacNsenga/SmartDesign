@@ -1,0 +1,286 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>S&D - Silver</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href=" {% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href=" {% static 'css/bootstrap-icons.css' %} " rel="stylesheet">
+
+        <link rel=" {% static 'stylesheet' %} " href="css/slick.css"/>
+
+        <link href=" {% static 'css/tooplate-little-fashion.css' %} " rel="stylesheet">
+<!--
+
+Tooplate 2127 Little Fashion
+
+https://www.tooplate.com/view/2127-little-fashion
+
+-->
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <div class="mt-5 ms-5">
+                <a href="{% url 'offre' %}" class="btn btn-dark">
+                    Retour
+                </a>
+            </div>         
+            
+            <section class="product-detail section-padding">
+                <div class="container">
+                    <div class="row">
+            
+                        <!-- Image de l'offre -->
+                        <div class="col-lg-6 col-12">
+                            <div class="product-thumb">
+                                <img src="{% static 'images/people/DSC_0030.jpg' %}" class="img-fluid product-image" alt="Offre Silver">
+                            </div>
+                        </div>
+            
+                        <!-- Informations sur l'offre -->
+                        <div class="col-lg-6 col-12">
+                            <div class="product-info d-flex">
+                                <div>
+                                    <h2 class="product-title mb-0">Offre <span>SILVER</span></h2>
+                                    <strong class="text-muted">Standard</strong>
+                                    <p class="product-p">Découvrez notre offre Silver pour une expérience unique.</p>
+                                </div>
+                            </div>
+            
+                            <!-- Description de l'offre -->
+                            <div class="product-description">
+                                <strong class="d-block mt-4 mb-2">Description</strong>
+                                <p class="lead mb-5">Cette offre inclut :</p>
+                                <ul>
+                                    <li>100 photos retouchées de haute qualité</li>
+                                    <li>Vidéo de 35 minutes montée et optimisée</li>
+                                    <li>Shooting photo professionnel en extérieur</li>
+                                    <li>Accès aux fichiers originaux en haute résolution</li>
+                                    <li>Support technique et suivi pendant 1 mois</li>
+                                </ul>
+                            </div>
+            
+                            <!-- Boutons d'action avec modals -->
+                            <div class="product-cart-thumb row">
+                                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                    <button type="button" class="btn custom-btn cart-btn" data-bs-toggle="modal" data-bs-target="#devisModal">Obtenir un devis</button>
+                                </div>
+                                <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                                    <button type="button" class="btn custom-btn cart-btn" data-bs-toggle="modal" data-bs-target="#reservationModal">Réserver maintenant</button>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- DEVIS MODAL -->
+            <div class="modal fade" id="devisModal" tabindex="-1" aria-labelledby="devisModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content border-0">
+                        <div class="modal-header flex-column">
+                            <h3 class="modal-title" id="devisModalLabel">Obtenir un <span class="text-primary">devis</span> de l'offre Silver</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Colonne 1 : Liste des options -->
+                                <div class="col-lg-6 col-12">
+                                    <h5 class="mb-3">Sélectionnez les <span class="text-primary">éléments</span> de l'offre Silver :</h5>
+                                    <form class="pt-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="photoRetouche" value="100 photos retouchées de haute qualité">
+                                            <label class="form-check-label" for="photoRetouche">
+                                                100 photos retouchées de haute qualité
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="videoOptimisee" value="Vidéo de 35 minutes montée et optimisée">
+                                            <label class="form-check-label" for="videoOptimisee">
+                                                Vidéo de 35 minutes montée et optimisée
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="shootingPhoto" value="Shooting photo professionnel en extérieur">
+                                            <label class="form-check-label" for="shootingPhoto">
+                                                Shooting photo professionnel en extérieur
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="accesFichiers" value="Accès aux fichiers originaux en haute résolution">
+                                            <label class="form-check-label" for="accesFichiers">
+                                                Accès aux fichiers originaux en haute résolution
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="supportTechnique" value="Support technique et suivi pendant 1 mois">
+                                            <label class="form-check-label" for="supportTechnique">
+                                                Support technique et suivi pendant 1 mois
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                        
+                                <!-- Colonne 2 : Formulaire -->
+                                <div class="col-lg-6 col-12 mt-3 mt-lg-0">
+                                    <h5 class="mb-3">Vos informations :</h5>
+                                    <form class="pt-3">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="fullName" placeholder="Nom complet" required>
+                                            <label for="fullName">Nom complet</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                            <label for="email">Email</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                                            <label for="phone">Numéro de téléphone</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="Donnez des précisions à votre demande" id="message" style="height: 120px" required></textarea>
+                                            <label for="message">Donnez des précisions à votre demande</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn custom-btn cart-btn">Envoyer la demande</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- MODAL Réserver maintenant -->
+            <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content border-0">
+                        <div class="modal-header flex-column">
+                            <h4 class="modal-title text-center" id="reservationModalLabel">Passer la demande pour l'<span class="text-primary">intégralité</span> de l'offre Silver</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>                        
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-12 col-12 mt-3 mt-lg-0">
+                                    <h5 class="mb-3">Vos informations :</h5>
+                                    <form class="pt-3">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="fullName" placeholder="Nom complet" required>
+                                            <label for="fullName">Nom complet</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                            <label for="email">Email</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                                            <label for="phone">Numéro de téléphone</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" placeholder="Donnez des précisions à votre demande" id="message" style="height: 120px" required></textarea>
+                                            <label for="message">Donnez des précisions à votre demande</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="w-100 d-flex justify-content-center">
+                                <button type="submit" class="btn custom-btn cart-btn">Envoyer la demande</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </main>
+
+        <!-- footer start-->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Little</a> Fashion</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                        <br>
+                        <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                    </div>
+        
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+        
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+        
+                        <ul class="social-icon">
+        
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+        
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+        
+        <!-- JAVASCRIPT FILES -->
+        <script src=" {% static 'js/jquery.min.js' %} "></script>
+        <script src=" {% static 'js/bootstrap.bundle.min.js' %} "></script>
+        <script src=" {% static 'js/Headroom.js' %} "></script>
+        <script src=" {% static 'js/jQuery.headroom.js' %} "></script>
+        <script src=" {% static 'js/slick.min.js' %} "></script>
+        <script src=" {% static 'js/custom.js' %} "></script>
+
+    </body>
+</html>
+

@@ -1,0 +1,221 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>S&D - contact</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href=" {% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href=" {% static 'css/bootstrap-icons.css' %} " rel="stylesheet">
+
+        <link rel=" {% static 'stylesheet' %} " href="css/slick.css"/>
+
+        <link href=" {% static 'css/tooplate-little-fashion.css' %} " rel="stylesheet">
+<!--
+
+Tooplate 2127 Little Fashion
+
+https://www.tooplate.com/view/2127-little-fashion
+
+-->
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+            <!-- navbar start-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <img src="{% static 'images/slideshow/smart-design-logo.png' %}" alt="Logo">
+                    </a>
+            
+                    <div class="d-lg-none">
+                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>
+            
+                        <a href="product-detail.html" class="bi-bag custom-icon"></a>
+                    </div>
+            
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'home' %}">Accueil</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'service' %}">Services</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'realisation' %}">Réalisations</a>
+                            </li>
+
+                            <li class="nav-item"></li>
+                                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'propos' %}">À propos</a>
+                            </li>
+            
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url 'contact' %}">Contact</a>
+                            </li>
+                        </ul>
+            
+                        <div class="d-none d-lg-block">
+                            <a href="#" class="bi-person custom-icon me-3"></a>
+            
+                            <a href="#" class="bi-bag custom-icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end-->
+
+            <header class="site-header section-padding-img site-header-image">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-12 header-info">
+                            <h1 class="text-center">Dites bonjour à<span class="text-primary"> notre équipe</span></h1>
+                            <h3 class="text-center"><span class="text-dark">Nous serions ravis de vous entendre</span></h3>                               
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <img src="{% static 'images/header/positive-european-woman-has-break-after-work.jpg' %}" class="header-image img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </header>            
+            
+            <section class="contact section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <h4 class="mb-4">Contactez-nous</h4>
+            
+                            <p>Pour toute demande d'information, vous pouvez nous contacter via les coordonnées ci-dessous ou utiliser le formulaire de contact.</p>
+            
+                            <ul class="contact-info list-unstyled">
+                                <li><strong>Numéro de téléphone :</strong> +242 06 123 4567</li>
+                                <li><strong>Email :</strong> contact@entreprisecongo.cg</li>
+                                <li><strong>Adresse :</strong> Avenue de la Paix, Quartier Centre, Brazzaville, République du Congo</li>
+                                <li><strong>Heures d'ouverture :</strong> Lundi - Vendredi : 8h00 - 17h00</li>
+                            </ul>
+                        </div>
+            
+                        <div class="col-lg-6 col-12">
+                            <h4 class="mb-4">Envoyer un message</h4>
+            
+                            <form action="#" method="post" class="contact-form">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="fullName" placeholder="Nom complet" required>
+                                    <label for="fullName">Nom complet</label>
+                                </div>
+            
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    <label for="email">Email</label>
+                                </div>
+            
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Numéro de téléphone" required>
+                                    <label for="phone">Numéro de téléphone</label>
+                                </div>
+            
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" placeholder="Message" id="message" style="height: 150px" required></textarea>
+                                    <label for="message">Votre message</label>
+                                </div>
+            
+                                <button type="submit" class="btn custom-btn">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>                    
+            
+            
+        </main>
+
+        <!-- footer start-->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Little</a> Fashion</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                        <br>
+                        <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                    </div>
+        
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+        
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+        
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+        
+                        <ul class="social-icon">
+        
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+        
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+        
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+        
+        <!-- JAVASCRIPT FILES -->
+        <script src=" {% static 'js/jquery.min.js' %} "></script>
+        <script src=" {% static 'js/bootstrap.bundle.min.js' %} "></script>
+        <script src=" {% static 'js/Headroom.js' %} "></script>
+        <script src=" {% static 'js/jQuery.headroom.js' %} "></script>
+        <script src=" {% static 'js/slick.min.js' %} "></script>
+        <script src=" {% static 'js/custom.js' %} "></script>
+
+    </body>
+</html>
